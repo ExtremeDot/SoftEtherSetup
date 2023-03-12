@@ -2,7 +2,7 @@
 
 * Domestic Server
 
-**  WireGuard [10.66.66.1] -> DOMESTIC VPS -> CASCADE -> EURO VPS [10.10.129.1] **
+**WireGuard [10.66.66.1] -> DOMESTIC VPS -> CASCADE -> EURO VPS [10.10.129.1]**
 
 ```sh
 ip addr add 10.10.129.42/24 brd + dev tap_soft
