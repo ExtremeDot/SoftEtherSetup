@@ -14,6 +14,11 @@ nano /etc/init.d/vpnserver
 iptables-save -t nat
 ```
 
+### Save Routing Tables Permanent
+```sh
+service netfilter-persistent save
+```
+
 ### DNSMASQ
 
 ```sh
@@ -22,6 +27,5 @@ nano /etc/dnsmasq.conf
 ```sh
 /etc/init.d/dnsmasq restart
 ```
-
 
 
