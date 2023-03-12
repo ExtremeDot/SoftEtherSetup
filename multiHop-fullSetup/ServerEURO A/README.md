@@ -162,5 +162,5 @@ it must be like that, if below lines are not included , please add them manually
 
 ```sh
 @reboot /etc/init.d/vpnserver start
-@reboot sleep 5 && service dnsmasq restart
+@reboot sleep 15 && service vpnserver start
 ```
