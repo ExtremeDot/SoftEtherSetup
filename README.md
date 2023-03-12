@@ -32,4 +32,9 @@ nano /etc/dnsmasq.conf
 /etc/init.d/dnsmasq restart
 ```
 
+### OpenVPN
 
+```sh
+systemctl status openvpn@server
+
+```
