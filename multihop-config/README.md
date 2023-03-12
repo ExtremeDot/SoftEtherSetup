@@ -20,3 +20,6 @@ ip rule add from 10.66.66.0/24 lookup vpn
 ip route add default via 10.10.129.1 dev tap_soft proto static table vpn
 ```
 
+```sh
+iptables -t nat -A POSTROUTING -s 10.66.66.0/24 -o tap_soft -j MASQUERADE
+```
