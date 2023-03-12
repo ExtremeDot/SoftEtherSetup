@@ -1,5 +1,10 @@
 # SoftEtherSetup
 
+### SoftEther VPN Server Restart
+```sh
+/etc/init.d/vpnserver restart
+```
+
 ###  Edit vpnserver file
 
 ```sh
