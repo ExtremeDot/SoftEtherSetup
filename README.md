@@ -17,6 +17,11 @@ nano /etc/init.d/vpnserver
 iptables-save -t nat
 ```
 
+### Edit DNSMASQ config
+
+```sh
+nano /etc/dnsmasq.conf
+```
 
 
 
