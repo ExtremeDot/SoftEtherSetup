@@ -38,3 +38,7 @@ nano /etc/dnsmasq.conf
 systemctl status openvpn@server
 
 ```
+
+### iNFO
+
+WIREGUARD is required to install Kernel 5.6 or above.
