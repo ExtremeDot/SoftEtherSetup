@@ -35,7 +35,7 @@ sleep 1
 #$IFCONFIG $TAP_INTERFACE $TAP_ADDR 
 
 # FOR DOMESTIC [IRAN] SERVER
-$IPBIN addr add  $TAPSTATIC brd + dev $TAP_INTERFACE
+$IPBIN address add $TAP_STATIC brd + dev $TAP_INTERFACE
 
 /etc/init.d/dnsmasq restart
 #$IPTABLESBIN -t nat -A POSTROUTING -s $TAP_NETWORK -o $SERVER_NIC -j MASQUERADE
