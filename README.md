@@ -1,12 +1,9 @@
 # SoftEtherSetup
 
-### SoftEther VPN Server Restart
+### SoftEther VPN Server
 ```sh
 /etc/init.d/vpnserver restart
 ```
-
-###  Edit vpnserver file
-
 ```sh
 nano /etc/init.d/vpnserver
 ```
@@ -17,10 +14,13 @@ nano /etc/init.d/vpnserver
 iptables-save -t nat
 ```
 
-### Edit DNSMASQ config
+### DNSMASQ
 
 ```sh
 nano /etc/dnsmasq.conf
+```
+```sh
+/etc/init.d/dnsmasq restart
 ```
 
 
