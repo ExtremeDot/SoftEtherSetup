@@ -39,6 +39,37 @@ systemctl status openvpn@server
 
 ```
 
+### Set DNS Permanently
+
+```sh
+echo "nameserver 8.8.8.8" > /etc/resolv.conf
+
+sudo apt update
+
+sudo apt install resolvconf
+
+sudo systemctl start resolvconf.service
+
+sudo systemctl enable resolvconf.service
+
+sudo systemctl status resolvconf.service
+
+nano /etc/resolvconf/resolv.conf.d/head
+
+# nameserver 8.8.8.8 
+# nameserver 8.8.4.4
+
+sudo systemctl restart resolvconf.service
+
+sudo systemctl restart systemd-resolved.service
+```
+
+```
+reboot
+```
+
+
+
 ### iNFO
 
 WIREGUARD is required to install Kernel 5.6 or above.
