@@ -1,2 +1,17 @@
 # SoftEtherSetup
-Step By Step Soft ether Setup for MultiHop
+
+###  Edit vpnserver file
+
+```sh
+nano /etc/init.d/vpnserver
+```
+
+### check iptables nat 
+
+```sh
+/sbin/iptables-save -t nat
+```
+
+
+
+
