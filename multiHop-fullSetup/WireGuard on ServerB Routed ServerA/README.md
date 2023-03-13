@@ -274,15 +274,37 @@ ifconfig
 
 Now Connect to WireGuard Client, check your ip location, if it will be ok, you should get ip from Server A Euro.
 
-check iptables nat rules if executed correctly
 
+### Troubleshooting:
+
+check iptables for nat routing
 ```sh
 iptables-save -t nat
 ```
 
 it must be like this
 
-![image](https://user-images.githubusercontent.com/120102306/224650164-75a1e870-8420-4bdf-af5d-4b2ff2e5601e.png)
+![image](https://user-images.githubusercontent.com/120102306/224652086-afd1fbb3-f32c-410e-877e-7085939d01e2.png)
+
+```sh
+ip rule | grep vpn
+```
+
+`32765:  from 10.66.66.0/24 lookup vpn`
+
+```sh
+ip route show table vpn
+```
+
+`default via 10.10.98.1 dev tap_soft proto static`
+
+if vpn table is not running, we have to running commands manually
+
+open `/etc/init.d/vpnserver` file using nano
+
+```sh
+nano /etc/init.d/vpnserver
+```
 
 
 
