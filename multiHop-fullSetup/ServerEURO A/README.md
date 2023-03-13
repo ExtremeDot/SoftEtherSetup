@@ -164,3 +164,66 @@ it must be like that, if below lines are not included , please add them manually
 @reboot /etc/init.d/vpnserver start
 @reboot sleep 15 && service vpnserver start
 ```
+
+***
+
+SoftEther Server Manager 
+
+[Download SoftEther Server Manager app from Source](https://www.softether-download.com/en.aspx)
+
+![image](https://user-images.githubusercontent.com/120102306/224613584-4118f24a-1d8e-48be-879f-f5e9589623b9.png)
+
+ssh to server and run seshow command to see details for connecting to server
+
+```sh
+seshow
+```
+
+![image](https://user-images.githubusercontent.com/120102306/224613845-7471342d-97e6-43a5-93b9-ab409c56a0f5.png)
+
+copy password text
+
+now run SoftEther VPN Server Manager
+
+![image](https://user-images.githubusercontent.com/120102306/224614148-39ebe45b-d755-4fc2-aeab-ca9062a4e1cc.png)
+
+click on **New Setting** then input required data.
+
+![image](https://user-images.githubusercontent.com/120102306/224614423-e8cc6765-2a41-45b5-82f8-cc7397369751.png)
+
+click on **OK**.
+
+Select the Server from list then hit the **Connect **
+
+![image](https://user-images.githubusercontent.com/120102306/224614604-5c843c4c-2c43-4b5f-bf84-19accfe57c90.png)
+
+Yes
+
+
+![image](https://user-images.githubusercontent.com/120102306/224614645-79b81a4b-726b-4e08-abe9-550f38b31595.png)
+
+
+OK
+
+![image](https://user-images.githubusercontent.com/120102306/224614835-65fa5698-ef10-4804-ba69-d07ed6030be7.png)
+
+Select **DEFAULT** and Delete it. 
+
+Now we have one Virtual HUB named VPN.
+
+![image](https://user-images.githubusercontent.com/120102306/224615096-c1a3b6e2-fe8e-4d44-b404-f4c08b615357.png)
+
+Double click on **VPN** hub and create new client and users.
+
+`VPN HUB > Manage Users > New `
+
+![image](https://user-images.githubusercontent.com/120102306/224615401-f2fc1e80-094a-43a3-8911-80de1bf9efb2.png)
+
+![image](https://user-images.githubusercontent.com/120102306/224615421-881a1f3c-c812-4332-ac18-11eb58a80515.png)
+
+![image](https://user-images.githubusercontent.com/120102306/224615436-2277beea-fd60-4999-a31c-256e486cb78a.png)
+
+
+
+
+
