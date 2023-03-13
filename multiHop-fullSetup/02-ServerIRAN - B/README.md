@@ -154,6 +154,49 @@ Now all clients that connecting to Server B, they will route and guided into Ser
 
 ***
 
+Open SoftEther VPN Manager and click on **Edit config**
+
+![image](https://user-images.githubusercontent.com/120102306/224670094-ac983af1-a34b-4671-b373-a39e67f6b4e2.png)
+
+click on *Save to File**
+
+![image](https://user-images.githubusercontent.com/120102306/224670300-9a483d5f-0736-48b8-8962-be317c9d92e8.png)
+
+open file using notepad or any text editor
+
+
+find `declare DDnsClient` value and set to disabled.
+
+```sh
+declare DDnsClient
+	{
+		bool Disabled true
+	}
+```
+
+find `bool DisableNatTraversal` and set it to disabled
+
+```sh
+bool DisableNatTraversal
+```
+
+save the file and import into SoftEther Server Manager.
+
+![image](https://user-images.githubusercontent.com/120102306/224671119-1e9e3ff9-add3-4bb6-b014-f971da2cc889.png)
+
+click on **Import File and Apply** , then Select modified **vpn_server.config** file then click **Open**
+
+![image](https://user-images.githubusercontent.com/120102306/224671334-1d37001a-c217-46c5-b9f6-fb9a59475206.png)
+
+
+![image](https://user-images.githubusercontent.com/120102306/224671417-23ea6c56-e865-423c-9562-858cb2832da8.png)
+
+click on Yes, serever will rebooted.
+
+
+
+
+
 
 MultiHop Setup with Another VPN Server on Server B [ IRAN ]
 
