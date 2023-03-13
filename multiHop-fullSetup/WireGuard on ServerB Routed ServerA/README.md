@@ -252,6 +252,13 @@ at the End Save The File and Exit Nano.
 
 `Ctrl + x`
 
+create new table as **vpn**
+
+```sh
+echo 1000 vpn >> /etc/iproute2/rt_tables
+```
+
+
 Restart The VPN Server
 
 ```sh
