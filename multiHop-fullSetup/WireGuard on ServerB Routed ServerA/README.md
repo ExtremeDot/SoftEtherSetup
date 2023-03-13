@@ -123,9 +123,9 @@ TAP_INTERFACE=tap_soft
 TABLE_VPN=vpn
 
 # TAP CONFIGS
-TAP_NETWORK=10.10.129.0/24
-TAP_GW=10.10.129.1
-TAP_STATIC=10.10.129.50/24
+TAP_NETWORK=10.10.98.0/24
+TAP_GW=10.10.98.1
+TAP_STATIC=10.10.98.50/24
 
 # WIREGUARD SAMPLE
 FIRST_HOP=10.66.66.0/24
@@ -190,11 +190,12 @@ TAP_INTERFACE, its the tap interface on Server B [IRAN], run ifconfig command to
 
 ```sh
 # TAP CONFIGS
-TAP_NETWORK=10.10.129.0/24
-TAP_GW=10.10.129.1
-TAP_STATIC=10.10.129.50/24
+TAP_NETWORK=10.10.98.0/24
+TAP_GW=10.10.98.1
+TAP_STATIC=10.10.98.50/24
 ```
-all TAP configs are related to Server A EURO
+all TAP configs are related to Server A EURO , [more details on Installation Setup on Server A](https://github.com/ExtremeDot/SoftEtherSetup/tree/main/multiHop-fullSetup/ServerEURO%20A#installing-softether-server)
+
 
 TAP_NETWORK, its the network DHCP Server on Server A [EURO]
 
@@ -223,4 +224,12 @@ Restart The VPN Server
 
 
 ***
+
+run ifconfig command and check if new setting are configured correctly.
+
+`
+ifconfig
+`
+
+![image](https://user-images.githubusercontent.com/120102306/224643523-e40d6ef5-479c-441e-87cf-9bd66cfc733e.png)
 
