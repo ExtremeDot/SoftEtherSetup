@@ -273,3 +273,16 @@ ifconfig
 ***
 
 Now Connect to WireGuard Client, check your ip location, if it will be ok, you should get ip from Server A Euro.
+
+check iptables nat rules if executed correctly
+
+```sh
+iptables-save -t nat
+```
+
+it must be like this
+
+![image](https://user-images.githubusercontent.com/120102306/224650164-75a1e870-8420-4bdf-af5d-4b2ff2e5601e.png)
+
+
+
