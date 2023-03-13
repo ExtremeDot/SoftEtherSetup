@@ -180,6 +180,42 @@ IP_BIN=/sbin/ip
 TAP_INTERFACE=tap_soft
 TABLE_VPN=vpn
 ```
+check IPTABLESBIN binary file
+
+```sh
+whereis iptables
+```
+
+`iptables: /sbin/iptables /etc/iptables /usr/share/iptables /usr/share/man/man8/iptables.8.gz
+`
+
+now we should change the value with exsisting iptables binary file.
+
+```sh
+IPTABLESBIN=/sbin/iptables
+```
+
+check IP_BIN
+
+```sh
+whereis ip
+```
+
+`ip: /bin/ip /sbin/ip /usr/share/man/man8/ip.8.gz /usr/share/man/man7/ip.7.gz`
+
+its available and OK, so my new config for binary is:
+
+```sh
+# BINARY FILES
+IPTABLESBIN=/sbin/iptables
+IP_BIN=/sbin/ip
+TAP_INTERFACE=tap_soft
+TABLE_VPN=vpn
+```
+
+
+go for Next
+
 
 TAP_INTERFACE, its the tap interface on Server B [IRAN], run ifconfig command to sure about it.
 
