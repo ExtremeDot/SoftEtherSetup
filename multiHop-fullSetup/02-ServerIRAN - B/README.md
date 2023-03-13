@@ -211,7 +211,7 @@ declare DDnsClient
 find `bool DisableNatTraversal` and set it to disabled
 
 ```sh
-bool DisableNatTraversal
+bool DisableNatTraversal true
 ```
 
 save the file and import into SoftEther Server Manager.
