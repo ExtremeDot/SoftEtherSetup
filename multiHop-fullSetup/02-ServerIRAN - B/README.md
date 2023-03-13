@@ -92,9 +92,14 @@ run SoftEther VPN Manager on your Windows or Mac-OS and enter login data for you
 ![image](https://user-images.githubusercontent.com/120102306/224620506-7662f7e0-cdfd-4a34-a231-05ed8c93da23.png)
 
 
+
+
 ![image](https://user-images.githubusercontent.com/120102306/224620554-a6e44958-fe0c-4725-bbc6-2784eebdf687.png)
 
 hit Yes
+
+
+
 
 ![image](https://user-images.githubusercontent.com/120102306/224620584-9beb77ec-42af-4d06-b075-d827879fec95.png)
 
@@ -104,17 +109,31 @@ Select OK
 
 Remove DEFAULT hub.
 
+
+
+
 ![image](https://user-images.githubusercontent.com/120102306/224620821-33a51883-3ff5-4a09-b821-cd216a2b7a71.png)
+
+
+
 
 Select **VPN** hub and click on **Manage Virtual Hub**
 
+
+
 ![image](https://user-images.githubusercontent.com/120102306/224620909-106d221d-d375-4ff4-8247-a7ddf743e6a0.png)
+
+
 
 Select **Manage Cascade Connections**
 
 Click On **New**
 
+
+
 ![image](https://user-images.githubusercontent.com/120102306/224623555-edb07dc0-c0e2-4ec2-ac80-a0a53c052646.png)
+
+
 
 
 
@@ -138,11 +157,18 @@ after all, click on **OK**.
 
 New Cascade Server will be listed on **Cascade Connection on VPN** Window.
 
+
+
 ![image](https://user-images.githubusercontent.com/120102306/224622453-ecbb9ee6-3d25-4e66-b2a4-bc8629d73a39.png)
+
+
 
 Select Server and click on **Online**.
 
+
+
 ![image](https://user-images.githubusercontent.com/120102306/224622645-2516d5be-509c-42e3-9580-e8fce413cdbe.png)
+
 
 
 wait for connection to get established.
@@ -156,11 +182,19 @@ Now all clients that connecting to Server B, they will route and guided into Ser
 
 Open SoftEther VPN Manager and click on **Edit config**
 
+
+
 ![image](https://user-images.githubusercontent.com/120102306/224670094-ac983af1-a34b-4671-b373-a39e67f6b4e2.png)
+
+
 
 click on *Save to File**
 
+
+
 ![image](https://user-images.githubusercontent.com/120102306/224670300-9a483d5f-0736-48b8-8962-be317c9d92e8.png)
+
+
 
 open file using notepad or any text editor
 
@@ -182,14 +216,24 @@ bool DisableNatTraversal
 
 save the file and import into SoftEther Server Manager.
 
+
+
 ![image](https://user-images.githubusercontent.com/120102306/224671119-1e9e3ff9-add3-4bb6-b014-f971da2cc889.png)
 
+
+
 click on **Import File and Apply** , then Select modified **vpn_server.config** file then click **Open**
+
+
 
 ![image](https://user-images.githubusercontent.com/120102306/224671334-1d37001a-c217-46c5-b9f6-fb9a59475206.png)
 
 
+
+
 ![image](https://user-images.githubusercontent.com/120102306/224671417-23ea6c56-e865-423c-9562-858cb2832da8.png)
+
+
 
 click on Yes, serever will rebooted.
 
