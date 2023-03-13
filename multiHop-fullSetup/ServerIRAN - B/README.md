@@ -114,7 +114,7 @@ Select **Manage Cascade Connections**
 
 Click On **New**
 
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/120102306/224623555-edb07dc0-c0e2-4ec2-ac80-a0a53c052646.png)
 
 
 
