@@ -100,5 +100,70 @@ no Using SFTP clients loginto Server and download the file:
 
 put **extremeAdmin.ovpn** into openvpn client and connect to server.
 
+***
+
+### Routing
+
+OpenVPN Client is connecting to Server B, if we check the ip location when connecting to OpenVPN Server, it will show the IP of Server B [IRAN]
+
+**Now we Route OpenVPN Server into Server A [EURO]**
+
+run **ifconfig** to see our available networks
+
+```sh
+ifconfig
+```
+
+![image](https://user-images.githubusercontent.com/120102306/224659996-743ef394-8b5a-4537-9003-e2cdac8f6745.png)
+
+**tap_soft** and **wg0** were set before from this tuturial. [WireGuard on ServerB Routed ServerA](https://github.com/ExtremeDot/SoftEtherSetup/tree/main/multiHop-fullSetup/WireGuard%20on%20ServerB%20Routed%20ServerA)
+
+now we will add **tun0** OpenVPN Server to VPN table created before.
+
+```sh
+ip rule add from 10.8.0.0/24 lookup vpn
+```
+
+```sh
+iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o tap_soft -j MASQUERADE
+```
+
+now reconnect OpenVPN client and check for new ip location, it must return the ip of Server A [EURO] IP.
+
+if its ok, now we will add new configs into `/etc/init.d/vpnserver` file.
+
+
+```sh 
+nano /etc/init.d/vpnserver
+```
+
+copy below lines and add them on top of `# START` comment.
+
+```sh
+# OPENVPN SAMPLE
+OVPN_HOP="10.8.0.0/24"
+```
+![image](https://user-images.githubusercontent.com/120102306/224662951-2881e403-6bbe-4e87-b2d6-27c2d76280be.png)
+
+find the `$IP_BIN rule add from $FIRST_HOP lookup $TABLE_VPN` from Start) function and paste the below line on top of that.
+
+```sh
+$IP_BIN rule add from $OVPN_HOP lookup $TABLE_VPN
+```
+
+![image](https://user-images.githubusercontent.com/120102306/224663519-6270e568-0af9-4802-a064-3af4b592d439.png)
+
+
+find the `$IPTABLESBIN -t nat -A POSTROUTING -s $FIRST_HOP -o $TAP_INTERFACE -j MASQUERADE` from Start) function and paste the command on top of that.
+
+```sh
+$IPTABLESBIN -t nat -A POSTROUTING -s $OVPN_HOP -o $TAP_INTERFACE -j MASQUERADE
+```
+
+![image](https://user-images.githubusercontent.com/120102306/224664338-dd6a1b1d-094a-488f-9e1b-06bf1539ee9b.png)
+
+
+save the file and reboot the server.
+
 
 
