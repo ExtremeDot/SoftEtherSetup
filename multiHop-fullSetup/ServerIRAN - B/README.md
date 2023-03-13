@@ -114,9 +114,14 @@ Select **Manage Cascade Connections**
 
 Click On **New**
 
+![Uploading image.png…]()
+
+
+
 `Setting Name: Server A Euro`
 
 `Host Name: 190.190.190.190`
+
 Public IP of your EURO VPS Server: 190.190.190.190 , change with your VPS host IP.
 
 `Port Number: 443`
@@ -124,6 +129,7 @@ Public IP of your EURO VPS Server: 190.190.190.190 , change with your VPS host I
 `Virtual Hub Name: VPN`
 
 `User Name: extreme2023`
+
 `Password:  exterme2024`
 
 Username and password were defined from EuroServer , it must be valid data.
