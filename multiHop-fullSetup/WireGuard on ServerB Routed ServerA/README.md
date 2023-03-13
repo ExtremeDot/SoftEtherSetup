@@ -233,3 +233,7 @@ ifconfig
 
 ![image](https://user-images.githubusercontent.com/120102306/224643523-e40d6ef5-479c-441e-87cf-9bd66cfc733e.png)
 
+
+***
+
+Now Connect to WireGuard Client, check your ip location, if it will be ok, you should get ip from Server A Euro.
