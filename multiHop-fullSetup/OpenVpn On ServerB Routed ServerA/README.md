@@ -166,4 +166,46 @@ $IPTABLESBIN -t nat -A POSTROUTING -s $OVPN_HOP -o $TAP_INTERFACE -j MASQUERADE
 save the file and reboot the server.
 
 
+***
+
+
+Check if works fine after rebooting machine.
+
+* check ip rule on VPN table
+
+```sh 
+ip rule | grep vpn
+```
+
+the output must be like this
+
+```sh
+32764:  from 10.66.66.0/24 lookup vpn
+32765:  from 10.8.0.0/24 lookup vpn
+```
+
+
+* check table default routes
+
+
+```sh 
+ip route show table vpn
+```
+
+```sh
+default via 10.10.98.1 dev tap_soft proto static
+```
+
+* check iptables nat rules
+
+```sh
+iptables-save -t nat
+```
+
+```
+-A POSTROUTING -s 10.8.0.0/24 -o tap_soft -j MASQUERADE
+-A POSTROUTING -s 10.66.66.0/24 -o tap_soft -j MASQUERADE
+```
+
+
 
