@@ -1,3 +1,14 @@
+### Install
+
+```sh
+curl -O https://raw.githubusercontent.com/ExtremeDot/SoftEtherSetup/main/softether_source/build_se_fromsource.sh
+
+chmod +x build_se_fromsource.sh
+
+./build_se_fromsource.sh
+
+```
+
 ### Remove SoftEther
 
 ```sh
