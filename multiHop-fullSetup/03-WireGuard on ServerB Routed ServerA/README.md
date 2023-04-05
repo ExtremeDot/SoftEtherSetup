@@ -90,6 +90,13 @@ connect to Server using WireGuard, if you check th IP , you will see your IP is 
 
 now we will setup the SoftEther and Wireguard routing modification to access into Server A [EUROPE].
 
+***
+
+### check status
+
+```
+systemctl status wg-quick@wg0
+```
 
 ***
 
