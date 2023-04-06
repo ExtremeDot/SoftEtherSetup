@@ -198,3 +198,7 @@ https://github.com/ExtremeDot/SoftEtherSetup/blob/main/Linux-Client/vpnserver
 ```
 nano /etc/init.d/vpnserver
 ```
+
+***
+
+قسمت بعدی برای مسیردهی هست که توی فایل routing ادامه میدیم
