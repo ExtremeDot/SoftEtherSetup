@@ -184,3 +184,17 @@ ens35 ,36 ens37 هم که برا خروجی در نظر میگیریم.
 
 
 ![image](https://user-images.githubusercontent.com/120102306/230443987-d75d8e50-3555-4247-b6c6-ba7dee2b03ee.png)
+
+
+برای هر کدوم از هاب ها، به سرور cascade میزنیم.
+
+برای تنظیم فایلvpnserver فایل زیر رو ببینید
+
+https://github.com/ExtremeDot/SoftEtherSetup/blob/main/Linux-Client/vpnserver
+
+
+برای ویرایش از دستور زیر استفاده میکنیم
+
+```
+nano /etc/init.d/vpnserver
+```
