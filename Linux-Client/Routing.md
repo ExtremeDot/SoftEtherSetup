@@ -128,4 +128,61 @@ network:
 ![image](https://user-images.githubusercontent.com/120102306/230459108-75446731-a5bb-4401-b9d6-535c1109ea9f.png)
 
 3 VPN Connections , tap_soft1 , tap_soft2 and tap_soft3
-   
+
+***
+
+# DHCP Server Config
+
+![image](https://user-images.githubusercontent.com/120102306/230460565-746dc68c-6d71-49a5-a49c-011ec2ea9d1a.png)
+
+
+```
+nano /etc/dhcp/dhcpd.conf
+
+```
+
+edit as below
+
+```
+subnet 10.1.10.0 netmask 255.255.255.0 {
+  range 10.1.10.2 10.1.10.32;
+  option domain-name-servers 10.1.10.1,1.1.1.1,1.0.0.1;
+  option domain-name home;
+  option subnet-mask 255.255.255.0;
+  option routers 10.1.10.1;
+  option broadcast-address 10.1.10.255;
+  default-lease-time 3600;
+  max-lease-time 7200;
+}
+
+subnet 10.2.10.0 netmask 255.255.255.0 {
+  range 10.2.10.2 10.2.10.32;
+  option domain-name-servers 10.2.10.1,1.1.1.1,1.0.0.1;
+  option domain-name home;
+  option subnet-mask 255.255.255.0;
+  option routers 10.2.10.1;
+  option broadcast-address 10.2.10.255;
+  default-lease-time 3600;
+  max-lease-time 7200;
+}
+
+subnet 10.1.10.0 netmask 255.255.255.0 {
+  range 10.3.10.2 10.3.10.32;
+  option domain-name-servers 10.3.10.1,1.1.1.1,1.0.0.1;
+  option domain-name home;
+  option subnet-mask 255.255.255.0;
+  option routers 10.3.10.1;
+  option broadcast-address 10.3.10.255;
+  default-lease-time 3600;
+  max-lease-time 7200;
+}
+```
+
+```
+reboot
+```
+```
+
+***
+
+### ROUTING PART and Making Tables
