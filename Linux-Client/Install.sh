@@ -316,12 +316,6 @@ EOF
 
 echo "DNSStubListener=no" >> /etc/systemd/resolved.conf
 
-## FOR WRONG INPUT
-else
-echo "vpnserver file is not configured and exit"
-exit
-fi
-done
 
 sysctl -f
 sysctl --system
