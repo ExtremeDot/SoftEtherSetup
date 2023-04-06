@@ -179,3 +179,8 @@ ens35 ,36 ens37 هم که برا خروجی در نظر میگیریم.
 
 ![image](https://user-images.githubusercontent.com/120102306/230430960-d454ce2e-c742-4902-b95c-124213134ef0.png)
 
+
+![image](https://user-images.githubusercontent.com/120102306/230443978-bc9b737b-0afb-41c0-a17f-411a497d5edb.png)
+
+
+![image](https://user-images.githubusercontent.com/120102306/230443987-d75d8e50-3555-4247-b6c6-ba7dee2b03ee.png)
