@@ -1,34 +1,38 @@
+تو این روش  قراره یه دونه سافت اتر روی ماشین مجازی اجرا کنیم که ازش چندتا کانکشن بگیریم و بعد کانکشن ها رو بالانس کنیم.
+
+اینجا من قراره 3 تاکانکشن بیارم بالا و اون سه تا کانکشن رو بریج کنم توی 3 تا شبکه، بعد از اون میفرستم برا میکروتیک روتر
+
+
+
+اول سافت اتر رو نصب میکنیم
+
+دستور زیر رو از طریق ترمینال اجرا میکنیم
+
+
 ```
 curl -O https://raw.githubusercontent.com/ExtremeDot/SoftEtherSetup/main/Linux-Client/Install.sh && chmod +x Install.sh
 
 ./Install.sh
 
-
 ```
 
+صبر میکنیم تا برنامه های پیش نیاز نصب بشه
 
-```
-curl -O https://raw.githubusercontent.com/ExtremeDot/golden_one/master/build_se_stable.sh && chmod +x build_se_stable.sh
-
-./build_se_stable.sh
-```
-
-![image](https://user-images.githubusercontent.com/120102306/230366510-fa899d51-57fe-4c7a-96b1-e925ec82a746.png)
+![image](https://user-images.githubusercontent.com/120102306/230411127-95e22db0-f4c2-425b-add5-8d5d287a6ef7.png)
 
 
-***
+بعد از اینکه همه پیش نیازا نصب میشه، سوالها رو از تون میپرسه
 
-![image](https://user-images.githubusercontent.com/120102306/230366552-e6a4e930-92b1-4e7d-b605-e6d8761751ff.png)
+آدرس آی پی: برا من لوکال هست 
+همه رو میتونیم بصورت پیش فرض رد کنیم با ENTER
 
-***
+![image](https://user-images.githubusercontent.com/120102306/230413518-c27c4e5f-222a-430a-b554-1c95bec8280f.png)
 
-![image](https://user-images.githubusercontent.com/120102306/230366657-c4248592-1f37-4006-b5eb-19567c84c0fc.png)
+مرجله بعد برا دانلود فایل سافت انر هست، میتونید نسخه دیگه رو بذارید
 
-***
+![image](https://user-images.githubusercontent.com/120102306/230414045-772f0335-a2e2-482c-a62d-16e2c4964da5.png)
 
-![image](https://user-images.githubusercontent.com/120102306/230376709-b712b7cd-62ad-479b-9df7-60edc7647d63.png)
+https://github.com/SoftEtherVPN/SoftEtherVPN_Stable
+میتونید از سورس خودش چک کنید
 
 
-![image](https://user-images.githubusercontent.com/120102306/230376779-7a93e01e-2260-4327-a48b-b4143b5e06f5.png)
-
-s
