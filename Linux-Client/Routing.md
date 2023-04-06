@@ -302,3 +302,94 @@ network:
    interfaces:
    - ens37
 ```
+
+***
+
+```
+nano  /ExtremeDOT/dhcp_route.sh
+```
+
+```
+#!/bin/bash
+sleep 15
+echo "1" > /proc/sys/net/ipv4/ip_forward
+sysctl -w net.ipv4.ip_forward=1
+sysctl -p
+/usr/bin/systemctl start iptables
+sleep 3
+
+### VPN1
+VPNNETNAME1=tap_soft1
+VPN_TABLE1=901
+DEF_TABLE1=901
+VPNIP1=10.10.129.61
+sleep 1
+VPNIP_GW1=10.10.129.1
+VPNIP_NETWORK1=10.10.129.0/24
+BRIDGE_NAME1=bridge1
+BRIDGE_NETWORK1=10.1.10.0/24
+/sbin/ip route add $BRIDGE_NETWORK1 dev $BRIDGE_NAME1 table $DEF_TABLE1
+sleep 1
+/sbin/ip route add $VPNIP_NETWORK1 dev $VPNNETNAME1 table $DEF_TABLE1
+sleep 1
+/sbin/ip route add default via $VPNIP_GW1 dev $VPNNETNAME1 table $DEF_TABLE1
+sleep 2
+#/sbin/ip route show table $DEF_TABLE1
+/sbin/ip rule add iif $VPNNETNAME1 lookup $DEF_TABLE1
+sleep 1
+/sbin/ip rule add iif $BRIDGE_NAME1 lookup $DEF_TABLE1
+sleep 2
+#/sbin/ip rule | grep $DEF_TABLE1
+/sbin/iptables -t nat -A POSTROUTING -s $BRIDGE_NETWORK1 -o $VPNNETNAME1 -j MASQUERADE
+
+
+### VPN2
+VPNNETNAME2=tap_soft2
+VPN_TABLE2=902
+DEF_TABLE2=902
+VPNIP2=10.10.129.62
+sleep 1
+VPNIP_GW2=10.10.129.1
+VPNIP_NETWORK2=10.10.129.0/24
+BRIDGE_NAME2=bridge2
+BRIDGE_NETWORK2=10.2.10.0/24
+/sbin/ip route add $BRIDGE_NETWORK2 dev $BRIDGE_NAME2 table $DEF_TABLE2
+sleep 1
+/sbin/ip route add $VPNIP_NETWORK2 dev $VPNNETNAME2 table $DEF_TABLE2
+sleep 1
+/sbin/ip route add default via $VPNIP_GW2 dev $VPNNETNAME2 table $DEF_TABLE2
+sleep 2
+#/sbin/ip route show table $DEF_TABLE2
+/sbin/ip rule add iif $VPNNETNAME2 lookup $DEF_TABLE2
+sleep 1
+/sbin/ip rule add iif $BRIDGE_NAME2 lookup $DEF_TABLE2
+sleep 2
+#/sbin/ip rule | grep $DEF_TABLE2
+/sbin/iptables -t nat -A POSTROUTING -s $BRIDGE_NETWORK2 -o $VPNNETNAME2 -j MASQUERADE
+
+
+### VPN3
+VPNNETNAME3=tap_soft3
+VPN_TABLE3=903
+DEF_TABLE3=903
+VPNIP1=10.10.129.63
+sleep 1
+VPNIP_GW3=10.10.129.1
+VPNIP_NETWORK3=10.10.129.0/24
+BRIDGE_NAME3=bridge3
+BRIDGE_NETWORK3=10.3.10.0/24
+/sbin/ip route add $BRIDGE_NETWORK3 dev $BRIDGE_NAME3 table $DEF_TABLE3
+sleep 1
+/sbin/ip route add $VPNIP_NETWORK3 dev $VPNNETNAME3 table $DEF_TABLE3
+sleep 1
+/sbin/ip route add default via $VPNIP_GW3 dev $VPNNETNAME3 table $DEF_TABLE3
+sleep 2
+#/sbin/ip route show table $DEF_TABLE3
+/sbin/ip rule add iif $VPNNETNAME3 lookup $DEF_TABLE3
+sleep 1
+/sbin/ip rule add iif $BRIDGE_NAME3 lookup $DEF_TABLE3
+sleep 2
+#/sbin/ip rule | grep $DEF_TABLE3
+/sbin/iptables -t nat -A POSTROUTING -s $BRIDGE_NETWORK3 -o $VPNNETNAME3 -j MASQUERADE
+
+```
