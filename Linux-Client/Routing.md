@@ -123,7 +123,9 @@ network:
 
    3 Bridges : bridge1, bridge2, bridge3
    
-   
-   3 VPN Connections , tap_soft1 , tap_soft2 and tap_soft3
-   
+***   
+
+![image](https://user-images.githubusercontent.com/120102306/230459108-75446731-a5bb-4401-b9d6-535c1109ea9f.png)
+
+3 VPN Connections , tap_soft1 , tap_soft2 and tap_soft3
    
