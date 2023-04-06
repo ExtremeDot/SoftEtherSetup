@@ -131,7 +131,8 @@ echo "https://www.softether-download.com/en.aspx"
 echo
 echo " If you want to install another version, replace your link to the current one!"
 echo " The Current Selected Version IS: v4.41-9787-beta [Release Date: 2023-03-14]"
-#DLLINK=https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases/download/v4.41-9782-beta/softether-vpnserver-v4.41-9782-beta-2022.11.17-linux-x64-64bit.tar.gz
+echo "=================================="
+echo
 DLLINK=https://www.softether-download.com/files/softether/v4.41-9787-rtm-2023.03.14-tree/Linux/SoftEther_VPN_Server/64bit_-_Intel_x64_or_AMD64/softether-vpnserver-v4.41-9787-rtm-2023.03.14-linux-x64-64bit.tar.gz
 DLFILE=$SEDIR/Soft.tar.gz
 read -e -i "$DLLINK" -p "SoftEther Link: " input
