@@ -1,4 +1,13 @@
 ```
+curl -O https://raw.githubusercontent.com/ExtremeDot/SoftEtherSetup/main/Linux-Client/Install.sh && chmod +x Install.sh
+
+./Install.sh
+
+
+```
+
+
+```
 curl -O https://raw.githubusercontent.com/ExtremeDot/golden_one/master/build_se_stable.sh && chmod +x build_se_stable.sh
 
 ./build_se_stable.sh
