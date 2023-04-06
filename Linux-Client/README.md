@@ -81,6 +81,64 @@ Enter رو میزنیم تا شروع به دانلود کنه،
 برا wan آی پی 192.168.2.25 رو ست میکنم
 
 
+wan توی تنظیمان گذاشتم روی vmnet06 که همون intel هست که به مودم وصله
+
+اولین کارت شبکه من توی لینوکس اینه
+
+اون سه تای بعدی نقش لن رو دارن که با همدیگه براشون آی پی ست میکنیم
+
+آی پی که سیستم از مودم گرفته 192.168.2.132 هست
+
+با ssh بهش وصل میشم و دستورات رو وارد میکنم (کپی کردن دستورات راحت تره)
 
 
 
+از تنظیمات netplan یه کپی میفرستیم توی بکاپ
+
+```
+mkdir -p /root/netplan_backup
+
+cp /etc/netplan/* /root/netplan_backup/
+```
+
+چک کردن بکاپ
+```
+ls /root/netplan_backup/
+```
+
+پاک کردن تنظیمات شبکه روی نت پلان
+```
+rm -rf /etc/netplan/
+
+```
+
+```
+mkdir -p /etc/netplan/
+```
+
+```
+nano /etc/netplan/config.yaml
+```
+
+متن زیر رو کپی میکنیم ، 
+```
+network:
+ version: 2
+ renderer: networkd
+
+ ethernets:
+
+# WAN INTERFACE
+  ens33:
+   dhcp4: yes
+```
+
+
+دخیره و سیستم رو ریستارت میکنیم.
+![image](https://user-images.githubusercontent.com/120102306/230424923-03519c9b-a9f9-4eea-abf5-b4530f55149a.png)
+
+```
+reboot
+```
+
+***
