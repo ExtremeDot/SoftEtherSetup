@@ -36,3 +36,13 @@ https://github.com/SoftEtherVPN/SoftEtherVPN_Stable
 میتونید از سورس خودش چک کنید
 
 
+Enter رو میزنیم تا شروع به دانلود کنه، 
+
+اگه درست دانلود بشه، میره برا نصب و سوالات بعدی...
+
+این آی پی باید رنجی از شبکه وی پی ان باشه
+![image](https://user-images.githubusercontent.com/120102306/230417819-647fa678-f35a-4a43-9492-958d0eeb7c7b.png)
+
+
+در انتها بهتون مشخصات سرور رو میده که باید از طریق Softether VPN ServerManager بهش وارد شید.
+
