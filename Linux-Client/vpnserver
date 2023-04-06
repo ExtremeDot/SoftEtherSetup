@@ -1,0 +1,72 @@
+#!/bin/sh
+# SoftETHER MultiBalance Configuration by ExtremeDOT
+# DATA
+DAEMON=/usr/local/vpnserver/vpnserver
+LOCK=/var/lock/subsys/vpnserver
+
+# BINARY FILES
+IPTABLESBIN=/usr/sbin/iptables
+IP_BIN=/sbin/ip
+
+# TAP CONFIGS 1
+TAP1_NETWORK=10.10.129.0/24
+TAP1_GW=10.10.129.1
+TAP1_STATIC=10.10.129.61/24
+TAP1_INTERFACE=tap_soft1
+TAP1_TABLE_VPN=801
+
+# TAP CONFIGS 2
+TAP2_NETWORK=10.10.129.0/24
+TAP2_GW=10.10.129.1
+TAP2_STATIC=10.10.129.62/24
+TAP2_INTERFACE=tap_soft2
+TAP2_TABLE_VPN=802
+
+# TAP CONFIGS 3
+TAP3_NETWORK=10.10.129.0/24
+TAP3_GW=10.10.129.1
+TAP3_STATIC=10.10.129.63/24
+TAP3_INTERFACE=tap_soft3
+TAP3_TABLE_VPN=803
+
+test -x $DAEMON || exit 0
+case "$1" in
+
+# START
+start)
+$DAEMON start
+touch $LOCK
+sleep 2
+$IP_BIN addr add  $TAP1_STATIC brd + dev $TAP1_INTERFACE
+sleep 5
+$IP_BIN addr add  $TAP2_STATIC brd + dev $TAP2_INTERFACE
+sleep 5
+$IP_BIN addr add  $TAP3_STATIC brd + dev $TAP3_INTERFACE
+
+;;
+
+# STOP
+stop)
+$DAEMON stop
+rm $LOCK
+;;
+
+# RESTART
+restart)
+$DAEMON stop
+sleep 1
+$DAEMON start
+sleep 2
+$IP_BIN addr add  $TAP1_STATIC brd + dev $TAP1_INTERFACE
+sleep 2
+$IP_BIN addr add  $TAP2_STATIC brd + dev $TAP2_INTERFACE
+sleep 2
+$IP_BIN addr add  $TAP3_STATIC brd + dev $TAP3_INTERFACE
+;;
+
+# INPUTS
+*)
+echo "Usage: $0 {start|stop|restart}"
+exit 1
+esac
+exit 0
