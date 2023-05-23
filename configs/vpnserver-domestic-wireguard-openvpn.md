@@ -15,16 +15,25 @@ local bridge name is **se** [tap_se]
 ### need to update these vars
 
 WireGuard Server is Running on : WG_HOP=10.66.88.0/24
+
 OpenVPN Server is Running on   : OVPN_HOP="10.8.0.0/24"
 
+
 TAP_INTERFACE=tap_se
+
 TAP_NETWORK=10.10.129.0/24
+
 TAP_GW=10.10.129.1
+
 TAP_STATIC=10.10.129.65/24
 
+
 IPTABLESBIN=/usr/sbin/iptables
+
 IP_BIN=/sbin/ip
+
 TAP_INTERFACE=tap_se
+
 TABLE_VPN=800
 
 
